@@ -382,3 +382,16 @@ target_include_directories(dw
         ${PROJECT_SOURCE_DIR}/libebl
         ${PROJECT_SOURCE_DIR}/libelf
 )
+
+add_executable(test backward.cpp)
+target_include_directories(test
+    PUBLIC 
+        ${PROJECT_SOURCE_DIR}/lib
+        ${PROJECT_SOURCE_DIR}/libasm
+        ${PROJECT_SOURCE_DIR}/libdw
+        ${PROJECT_SOURCE_DIR}/libdwelf
+        ${PROJECT_SOURCE_DIR}/libdwfl
+        ${PROJECT_SOURCE_DIR}/libebl
+        ${PROJECT_SOURCE_DIR}/libelf
+)
+target_link_libraries(test dw z dl)
