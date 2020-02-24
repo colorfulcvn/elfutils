@@ -383,6 +383,17 @@ target_include_directories(dw
         ${PROJECT_SOURCE_DIR}/libelf
 )
 
+install(FILES  libelf/elf-knowledge.h 
+               libdw/known-dwarf.h 
+               libasm/libasm.h
+               libdwelf/libdwelf.h
+               libdwfl/libdwfl.h
+               libdw/libdw.h               
+        DESTINATION include/elfutils)
+install(FILES  libdw/dwarf.h DESTINATION include)
+install(TARGETS dw ARCHIVE DESTINATION lib)
+
+### test
 #SET(CMAKE_EXE_LINKER_FLAGS "-static-libstdc++")
 add_executable(test backward.cpp)
 target_include_directories(test
