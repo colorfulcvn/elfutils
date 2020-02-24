@@ -84,6 +84,7 @@
 #include <streambuf>
 #include <string>
 #include <vector>
+#include <dlfcn.h>
 
 #if defined(BACKWARD_SYSTEM_LINUX)
 
@@ -220,8 +221,8 @@
 
 #if BACKWARD_HAS_DW == 1
 #include <dwarf.h>
-#include <elfutils/libdw.h>
-#include <elfutils/libdwfl.h>
+#include <libdw.h>
+#include <libdwfl.h>
 #endif
 
 #if BACKWARD_HAS_DWARF == 1

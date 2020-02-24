@@ -188,7 +188,7 @@ set(all_SRCS
     libdwfl/lines.c
     libdwfl/link_map.c
     libdwfl/linux-core-attach.c
-    libdwfl/linux-kernel-modules.c
+#    libdwfl/linux-kernel-modules.c
     libdwfl/linux-pid-attach.c
     libdwfl/linux-proc-maps.c
     libdwfl/lzma.c
@@ -383,6 +383,7 @@ target_include_directories(dw
         ${PROJECT_SOURCE_DIR}/libelf
 )
 
+#SET(CMAKE_EXE_LINKER_FLAGS "-static-libstdc++")
 add_executable(test backward.cpp)
 target_include_directories(test
     PUBLIC 
