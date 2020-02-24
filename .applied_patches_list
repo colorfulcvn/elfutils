@@ -1,0 +1,2 @@
+/mnt/205/root/buildroot-2019.11/package/elfutils/0001-Add-a-enable-disable-progs-configure-option.patch
+/mnt/205/root/buildroot-2019.11/package/elfutils/0002-Really-make-Werror-conditional-to-BUILD_WERROR.patch
