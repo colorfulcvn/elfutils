@@ -390,7 +390,7 @@ install(FILES  libelf/elf-knowledge.h
                libdwfl/libdwfl.h
                libdw/libdw.h               
         DESTINATION include/elfutils)
-install(FILES  libdw/dwarf.h libelf/gelf.h libelf/nlist.h libelf/libelf.h DESTINATION include)
+install(FILES  lib/eu-config.h libdw/dwarf.h libelf/gelf.h libelf/nlist.h libelf/libelf.h DESTINATION include)
 install(TARGETS dw ARCHIVE DESTINATION lib)
 
 ### test
