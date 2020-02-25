@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.5)
 
 project(libdw)
 
@@ -395,8 +395,8 @@ install(TARGETS dw ARCHIVE DESTINATION lib)
 
 ### test
 #SET(CMAKE_EXE_LINKER_FLAGS "-static-libstdc++")
-add_executable(test backward.cpp)
-target_include_directories(test
+add_executable(test1 backward.cpp)
+target_include_directories(test1
     PUBLIC 
         ${PROJECT_SOURCE_DIR}/lib
         ${PROJECT_SOURCE_DIR}/libasm
@@ -406,4 +406,4 @@ target_include_directories(test
         ${PROJECT_SOURCE_DIR}/libebl
         ${PROJECT_SOURCE_DIR}/libelf
 )
-target_link_libraries(test dw z dl)
+target_link_libraries(test1 dw z dl)
